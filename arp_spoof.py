@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import scapy.all as scapy
 import argparse
@@ -47,4 +47,4 @@ except KeyboardInterrupt:
     print("\nDetected CTRL + C ................Quitting")
     restore(options.target, options.gateway)
 except IndexError:
-    print("\nFucking scapy module........Just run the program again.")
+    print("\nI don't know why this is happening. Just run the program again.")
