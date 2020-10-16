@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+#argparse is used to make user friendly command line
+#time() returns the correct system time
+
 import scapy.all as scapy
 import argparse
 import time
